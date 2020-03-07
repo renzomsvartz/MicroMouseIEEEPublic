@@ -1,0 +1,74 @@
+#include <stdio.h>
+//keep in mind! orientation must be maintained frequently
+int main (int argc, void *argv[])
+{
+        nodelist
+        choice() //choose direction based on orientation, heuristic_remaining_distance, diagonal, ... ,
+
+        movement() //move+, maintain orientation
+        orientation
+        /* three options, node to node, node to corner, node to deadend. */ //What defines a corner: Two paths     How: getSensorCount == 2     Then what: Record into and out of wheel motion and maintain orientation
+                                                                            //What defines a deadend. One path     How: getSensorCount == 1      Then what: Turn 180*, return to node using cornersnodelist
+
+        deadend_mode() //move back to node_ID   /* record paths from node_ID NESW */ remove as searched. or use ID. allignment: orientate mouse to face path. Double check: corners
+
+        record_node() //determine ID is a node, store it's ID in nodelist,
+
+        getSensor() //purely sensor data+, dots may exist as walls do,
+
+        rotation_encoder
+
+        corners
+        cornersnodelist //from node to node, into and  out of
+}
+
+int node[256][3]; //ID_integer, distance_integer, backpath_ID_integer, heuristic_remaining_distance
+int distance_integer = 0;
+int heuristic_remaining_distance = 0;
+
+dynamic array *queue < node /* queue SBC */
+//S 0/10 NULL
+queue
+-----
+----- < getSensor, choice (no priority) //choice calls motor go this way somehow needs soln
+//A 7/16 S < get data when at A
+queue //update queue
+-----
+//A 7/16 S < hmm how did we get there Motor. +Next+//Motor should have return motor calls getnode and returns to where it came from //Motor goes until it finds a node
+----- < return, choice, return orientation
+//B 2/9 S
+-----
+queue
+-----
+//B 2/9 S
+//A 7/16 S  < queue elements swapped
+----- <
+queue
+
+//order of operations
+//getsensor, choice, motor function, record data and getNode
+//now how does the astar algorithm
+//breadth search ABC
+
+//choice
+void choice()
+{
+
+}
+
+//getSensor
+void getSensor()
+{
+        //use sensor data
+}
+
+//record_node
+void getNode(void)
+{
+        //getSensor
+}
+
+//how did we get there Motor.
+void Motor()
+{
+}
